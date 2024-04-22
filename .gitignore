@@ -51,7 +51,7 @@ lib/firebase_options.dart
 android/
 
 
-.env
+*.env
 .firebaserc
 firebase.json
 firestore.indexes.json
