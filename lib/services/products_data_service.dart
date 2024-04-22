@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import '../common_libs.dart';
 
@@ -10,7 +11,7 @@ class ApiService {
 
   Future<Catalog> fetchCatalog() async {
     Map<String, String> headers = {
-      'token': '3855a045-db2b-4729-84e1-6398f2fbdeb7',
+      'token': '${dotenv.env['TOKEN']}',
       'Accept': '*/*',
       'Host': 'gateway-smartforce-dev.devyandeh.com.br',
       'Accept-Encoding': 'gzip, deflate, br',
