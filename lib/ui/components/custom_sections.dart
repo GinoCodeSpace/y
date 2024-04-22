@@ -1,6 +1,6 @@
 import '../../common_libs.dart';
-// import '../../services/products_data_service.dart';
-import 'package:y/mock/data_mock.dart';
+import '../../services/products_data_service.dart';
+// import 'package:y/mock/data_mock.dart';
 
 class CustomSections extends StatefulWidget {
   const CustomSections({
@@ -17,10 +17,10 @@ class _CustomSectionsState extends State<CustomSections> {
   @override
   void initState() {
     super.initState();
-    // ApiService apiService = ApiService();
-    // futureCatalog = apiService.fetchCatalog();
-    MockService mockService = MockService();
-    futureCatalog = mockService.fetchMockData();
+    ApiService apiService = ApiService();
+    futureCatalog = apiService.fetchCatalog();
+    // MockService mockService = MockService();
+    // futureCatalog = mockService.fetchMockData();
   }
 
   @override
