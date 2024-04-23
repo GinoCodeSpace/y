@@ -49,11 +49,9 @@ Crie um arquivo `.env` na raiz do seu projeto Flutter para armazenar variáveis 
 `TOKEN=seu_token_de_api_aqui`
 
 
-Não esqueça de adicionar a referência para o arquivo .env no pubspec.yml
+# Não esqueça de adicionar a referência para o arquivo .env no pubspec.yml
 
 
-assets:
-    - .env
 
 
 
