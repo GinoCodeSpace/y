@@ -51,7 +51,9 @@ Crie um arquivo `.env` na raiz do seu projeto Flutter para armazenar variáveis 
 
 Não esqueça de adicionar a referência para o arquivo .env no pubspec.yml
 
+
 `assets:`
+
     `- .env`
 
 
