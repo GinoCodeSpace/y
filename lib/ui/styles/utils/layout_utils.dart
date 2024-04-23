@@ -121,4 +121,9 @@ class LayoutUtils {
     double deviceWidth = getDeviceWidth(context);
     return isDesktopLarge(deviceWidth) ? 500.0 : 480.0;
   }
+
+  static double getResponsiveChildPromotionContainerWidth(BuildContext context) {
+    double deviceWidth = getDeviceWidth(context);
+    return isDesktopLarge(deviceWidth) ? 360.0 : 172.0;
+  }
 }

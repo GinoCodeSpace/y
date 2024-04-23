@@ -34,7 +34,7 @@ class PromotionSection extends StatelessWidget {
         LayoutUtils.getResponsivePromotionContainerHeight(context);
 
     double promotionChildContainerWidthValue =
-        LayoutUtils.getResponsiveHeroCardWidthSize(context);
+        LayoutUtils.getResponsiveChildPromotionContainerWidth(context);
 
     double emphasisContainerHeightValue =
         LayoutUtils.getResponsiveHeroEmphasisContainerHeightValue(context);
@@ -91,29 +91,32 @@ class PromotionSection extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(
-                height: UiConstants.borderRadiusMedium,
-              ),
-              Container(
-                height: emphasisContainerHeightValue,
-                width: emphasisContainerWidthValue,
-                decoration: BoxDecoration(
-                  color: enphasisContainerColorValue,
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(
-                      UiConstants.borderRadiusLarge,
+              ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxWidth:
+                      emphasisContainerWidthValue + UiConstants.paddingMedium,
+                ),
+                child: Container(
+                  height: emphasisContainerHeightValue,
+                  width: emphasisContainerWidthValue,
+                  decoration: BoxDecoration(
+                    color: enphasisContainerColorValue,
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(
+                        UiConstants.borderRadiusLarge,
+                      ),
                     ),
                   ),
-                ),
-                child: Center(
-                  child: Text(
-                    emphasisContainerText,
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: UiConstants.snowBall,
-                          fontWeight: FontWeight.bold,
-                          fontSize: isDesktop ? 35 : 18,
-                        ),
-                    textAlign: TextAlign.center,
+                  child: Center(
+                    child: Text(
+                      emphasisContainerText,
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: UiConstants.snowBall,
+                            fontWeight: FontWeight.bold,
+                            fontSize: isDesktop ? 35 : 18,
+                          ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
@@ -123,7 +126,8 @@ class PromotionSection extends StatelessWidget {
                     : UiConstants.paddingSmall,
               ),
               SizedBox(
-                width: promotionChildContainerWidthValue,
+                width: promotionChildContainerWidthValue +
+                    UiConstants.paddingMedium,
                 child: Text(
                   centerText,
                   style: Theme.of(context).textTheme.labelMedium?.copyWith(
