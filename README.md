@@ -10,7 +10,7 @@
 
   
 
-`git clone`  [`https://github.com/oginoino/y.git`](https://github.com/oginoino/y.git)
+`git clone`  [`https://github.com/oginoino/y.git`](https://github.com/GinoCodeSpace/y)
 
   
 
