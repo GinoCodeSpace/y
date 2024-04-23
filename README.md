@@ -50,8 +50,7 @@ Crie um arquivo `.env` na raiz do seu projeto Flutter para armazenar variáveis 
 
 
 ### Não esqueça de adicionar a referência para o arquivo .env no pubspec.yml
-
-
+### Para proteger sua chave token adicione o arquivo .env ao .gitignore
 
 
 
@@ -59,7 +58,7 @@ Crie um arquivo `.env` na raiz do seu projeto Flutter para armazenar variáveis 
 
   
 
-É possível substituir as referências de ApiService para MockService para rodar o projeto offiline em `lib\ui\components\custom_sections.dart`.
+É possível substituir as referências de ApiService para MockService para rodar o projeto offline em `lib\ui\components\custom_sections.dart`.
 
   
 
