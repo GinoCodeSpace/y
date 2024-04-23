@@ -48,7 +48,12 @@ Crie um arquivo `.env` na raiz do seu projeto Flutter para armazenar variáveis 
 
 `TOKEN=seu_token_de_api_aqui`
 
-  
+
+Não esqueça de adicionar a referência para o arquivo .env no pubspec.yml
+
+`assets:
+    - .env`
+
 
 #### Usando dados Mocados
 
@@ -73,25 +78,25 @@ Na pasta do projeto execute:
  
 
     assets/: # Onde estão armazenadas as imagens e fontes do projeto.
-	    fonts/: # Armazena das fontes.
+	    fonts/: # Armazena das fontes usadas no projeto
 	    
 	    images/: # Armazena fotos e gifs.
     
-    lib/: # contém os recirsos de código
+    lib/: # contém os recursos de código
 	    main.dart: # Entry point do aplicativo
 	    
-	    y_app.dart: # instancia do Material App
+	    y_app.dart: # Instancia do Material App
 	    
 	    common_libs.dart : # Helper com as importações de arquivos compartilhadas
     
 	    models/: # Classes do projeto que representam as entidades da aplicação
 	    
-	    services/: # Serviço de consulta de API
+	    services/: # Serviço de consulta da API
 	    
 	    ui/: # Corresponde ao View do MVC
-		    styles/: # Reúne os recursos de estilo
-			    themes/: # Contem as instâncias de Material Theme
-			    utils/: # Helpers de ui constants e layout responsivo personalizado
+			styles/: # Reúne os recursos de estilo
+			    	themes/: # Contem as instâncias de Material Theme
+			    	utils/: # Helpers de ui constants e layout responsivo personalizado
 			    
 			pages/: # Scaffolds page
 			
