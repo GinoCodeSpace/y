@@ -6,7 +6,7 @@ class UiConstants {
   static const Color blueJeansLight = Color(0xFFE5F6FF);
   static const Color jeanGrey = Color(0xFF79747E);
   static const Color blackStar = Color(0xFF1D1B20);
-
+  static const Color deepblue = Color(0xFF04283B);
   static const Color greenLight = Color(0xFF7BBD1B);
   static const Color ocyan = Color(0xFF35A88E);
   static const Color greenDay = Color(0xFF007C61);
@@ -53,5 +53,5 @@ class UiConstants {
 
   static const double borderSideWidthMedium = 1.0;
 
-  static const int doubleLine = 2; 
+  static const int doubleLine = 2;
 }

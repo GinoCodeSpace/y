@@ -73,7 +73,7 @@ class CategoryNavItemMobile extends StatelessWidget {
                   horizontal: UiConstants.borderRadiusMedium),
             ),
             overlayColor: MaterialStateProperty.all(
-              UiConstants.jeanGrey,
+              UiConstants.deepblue,
             ),
             foregroundColor: MaterialStateProperty.resolveWith<Color>(
               (Set<MaterialState> states) {
@@ -83,7 +83,7 @@ class CategoryNavItemMobile extends StatelessWidget {
                     states.contains(MaterialState.pressed)) {
                   return UiConstants.pureWhite;
                 }
-                return UiConstants.blackStar;
+                return UiConstants.deepblue;
               },
             ),
             textStyle: MaterialStateProperty.all(
