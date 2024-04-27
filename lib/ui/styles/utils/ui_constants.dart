@@ -31,6 +31,7 @@ class UiConstants {
   static const double borderRadiusLarge = 40;
   static const double borderRadiusExtraLarge = 50;
 
+  static const double paddingNone = 0;
   static const double paddingExtraExtraSmall = 2;
   static const double paddingExtraSmall = 4;
   static const double paddingSmall = 8;
