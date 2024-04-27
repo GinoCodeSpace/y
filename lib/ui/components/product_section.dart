@@ -71,8 +71,12 @@ class _ProductSectionState extends State<ProductSection> {
     return Padding(
       padding: EdgeInsets.only(
         bottom: UiConstants.paddingMedium,
-        left: layoutPadding,
-        right: layoutPadding,
+        left: isDesktopLarge
+            ? layoutPadding - UiConstants.paddingLarge
+            : layoutPadding,
+        right: isDesktopLarge
+            ? layoutPadding - UiConstants.paddingLarge
+            : layoutPadding,
       ),
       child: Stack(
         clipBehavior: Clip.none,
@@ -80,7 +84,7 @@ class _ProductSectionState extends State<ProductSection> {
           Container(
             padding: EdgeInsets.symmetric(
               horizontal: isDesktopLarge
-                  ? UiConstants.paddingExtraExtraLarge
+                  ? UiConstants.paddingLarge
                   : UiConstants.paddingNone,
             ),
             child: Stack(
@@ -237,7 +241,7 @@ class _ProductSectionState extends State<ProductSection> {
           ),
           if (isDesktopLarge && showRightButton)
             Positioned(
-              right: 20,
+              right: 0,
               top: productSectionHeightValue / 2 - 20,
               child: FloatingActionButton(
                 onPressed: () => scrollCarousel(0.5),
@@ -248,7 +252,7 @@ class _ProductSectionState extends State<ProductSection> {
             ),
           if (isDesktopLarge && showLeftButton)
             Positioned(
-              left: 20,
+              left: 0,
               top: productSectionHeightValue / 2 - 20,
               child: FloatingActionButton(
                 onPressed: () => scrollCarousel(-0.5),
