@@ -43,10 +43,6 @@ class _ProductSectionState extends State<ProductSection> {
 
   @override
   Widget build(BuildContext context) {
-    // const double productSectionHeightValue = 480.0;
-
-    // const double cardsCarouselPositionLeftValue = 0;
-    // const double cardsCarouselPositionTopValue = 80;
     const double cardsCarouselHeightValue = 392;
     const double carouselTitleContainerPadding = 12.0;
 
@@ -80,100 +76,119 @@ class _ProductSectionState extends State<ProductSection> {
       ),
       child: Stack(
         clipBehavior: Clip.none,
-        fit: StackFit.passthrough,
         children: [
-          SizedBox(
-            height: productSectionHeightValue,
+          Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: isDesktopLarge
+                  ? UiConstants.paddingExtraExtraLarge
+                  : UiConstants.paddingNone,
+            ),
             child: Stack(
-              clipBehavior: Clip.hardEdge,
               children: [
-                Container(
-                  height: containerBackgroundHeightValue,
-                  width: containerBackgroundWidthValue,
-                  padding: EdgeInsets.all(
-                      isDesktopLarge ? 24 : UiConstants.paddingMedium),
-                  decoration: BoxDecoration(
-                    color: widget.backgroundColor,
-                    borderRadius: BorderRadius.all(Radius.circular(
-                      isDesktopLarge
-                          ? UiConstants.borderRadiusLarge
-                          : UiConstants.borderRadiusMedium,
-                    )),
-                  ),
-                  child: Column(
+                SizedBox(
+                  height: productSectionHeightValue,
+                  child: Stack(
+                    clipBehavior: Clip.hardEdge,
                     children: [
                       Container(
-                        height: UiConstants.paddingExtraExtraLarge,
-                        decoration: const BoxDecoration(
-                          color: UiConstants.snowBall,
+                        height: containerBackgroundHeightValue,
+                        width: containerBackgroundWidthValue,
+                        padding: EdgeInsets.all(isDesktopLarge
+                            ? UiConstants.paddingLarge
+                            : UiConstants.paddingMedium),
+                        decoration: BoxDecoration(
+                          color: widget.backgroundColor,
                           borderRadius: BorderRadius.all(Radius.circular(
-                              UiConstants.borderRadiusExtraLarge)),
+                            isDesktopLarge
+                                ? UiConstants.borderRadiusLarge
+                                : UiConstants.borderRadiusMedium,
+                          )),
                         ),
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: Padding(
-                            padding: const EdgeInsets.only(
-                                left: UiConstants.paddingMedium,
-                                right: UiConstants.paddingSmall),
-                            child: Row(
-                              children: [
-                                Text(
-                                  widget.section.section,
-                                  textAlign: TextAlign.left,
-                                  style: isDesktopLarge
-                                      ? Theme.of(context).textTheme.titleSmall
-                                      : Theme.of(context).textTheme.bodyMedium,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                const SizedBox(
-                                    width: UiConstants.paddingMedium),
-                                isDesktopLarge
-                                    ? Text(
-                                        widget.section
-                                            .getFormattedDescription(),
+                        child: Column(
+                          children: [
+                            Container(
+                              height: UiConstants.paddingExtraExtraLarge,
+                              decoration: const BoxDecoration(
+                                color: UiConstants.snowBall,
+                                borderRadius: BorderRadius.all(Radius.circular(
+                                    UiConstants.borderRadiusExtraLarge)),
+                              ),
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: UiConstants.paddingMedium,
+                                      right: UiConstants.paddingSmall),
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        widget.section.section,
                                         textAlign: TextAlign.left,
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyMedium,
-                                        overflow: TextOverflow.ellipsis,
-                                      )
-                                    : const SizedBox(),
-                                const Spacer(),
-                                isDesktopLarge
-                                    ? Container(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal:
-                                                carouselTitleContainerPadding),
-                                        height: UiConstants.paddingExtraLarge,
-                                        decoration: BoxDecoration(
-                                          color: UiConstants.snowBall,
-                                          borderRadius: const BorderRadius.all(
-                                              Radius.circular(UiConstants
-                                                  .borderRadiusMedium)),
-                                          border: Border.all(
-                                            color: UiConstants.jeanGrey,
-                                            width: UiConstants
-                                                .borderSideWidthMedium,
-                                          ),
-                                        ),
-                                        child: Center(
-                                          child: Text(
-                                            'Ver ${widget.section.products.length} itens',
-                                            textAlign: TextAlign.right,
-                                            style: Theme.of(context)
+                                        style: isDesktopLarge
+                                            ? Theme.of(context)
                                                 .textTheme
-                                                .labelMedium,
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
-                                        ),
-                                      )
-                                    : const SizedBox(),
-                              ],
+                                                .titleSmall
+                                            : Theme.of(context)
+                                                .textTheme
+                                                .bodyMedium,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                      const SizedBox(
+                                          width: UiConstants.paddingMedium),
+                                      isDesktopLarge
+                                          ? Text(
+                                              widget.section
+                                                  .getFormattedDescription(),
+                                              textAlign: TextAlign.left,
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyMedium,
+                                              overflow: TextOverflow.ellipsis,
+                                            )
+                                          : const SizedBox(),
+                                      const Spacer(),
+                                      isDesktopLarge
+                                          ? Container(
+                                              padding: const EdgeInsets
+                                                  .symmetric(
+                                                  horizontal:
+                                                      carouselTitleContainerPadding),
+                                              height:
+                                                  UiConstants.paddingExtraLarge,
+                                              decoration: BoxDecoration(
+                                                color: UiConstants.snowBall,
+                                                borderRadius: const BorderRadius
+                                                    .all(
+                                                    Radius.circular(UiConstants
+                                                        .borderRadiusMedium)),
+                                                border: Border.all(
+                                                  color: UiConstants.jeanGrey,
+                                                  width: UiConstants
+                                                      .borderSideWidthMedium,
+                                                ),
+                                              ),
+                                              child: Center(
+                                                child: Text(
+                                                  'Ver ${widget.section.products.length} itens',
+                                                  textAlign: TextAlign.right,
+                                                  style: Theme.of(context)
+                                                      .textTheme
+                                                      .labelMedium,
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                ),
+                                              ),
+                                            )
+                                          : const SizedBox(),
+                                    ],
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
+                            const Spacer(),
+                          ],
                         ),
                       ),
-                      const Spacer(),
                     ],
                   ),
                 ),
@@ -205,7 +220,10 @@ class _ProductSectionState extends State<ProductSection> {
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: EdgeInsets.only(
-                                left: index > 0 ? productCardSpacingValue : 0),
+                              left: index > 0
+                                  ? productCardSpacingValue
+                                  : UiConstants.paddingNone,
+                            ),
                             child: ProductCard(
                                 product: widget.section.products[index]),
                           );
@@ -219,7 +237,7 @@ class _ProductSectionState extends State<ProductSection> {
           ),
           if (isDesktopLarge && showRightButton)
             Positioned(
-              right: -24,
+              right: 20,
               top: productSectionHeightValue / 2 - 20,
               child: FloatingActionButton(
                 onPressed: () => scrollCarousel(0.5),
@@ -230,7 +248,7 @@ class _ProductSectionState extends State<ProductSection> {
             ),
           if (isDesktopLarge && showLeftButton)
             Positioned(
-              left: -24,
+              left: 20,
               top: productSectionHeightValue / 2 - 20,
               child: FloatingActionButton(
                 onPressed: () => scrollCarousel(-0.5),

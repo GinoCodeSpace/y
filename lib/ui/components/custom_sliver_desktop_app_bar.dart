@@ -150,6 +150,7 @@ class CustomSliverDesktopAppBar extends StatelessWidget {
               ),
               Positioned(
                 right: cardIconPositionIncenterTitleContent,
+                top: UiConstants.paddingExtraSmall,
                 child: FilledButton.icon(
                   onPressed: () {},
                   icon: const Icon(
