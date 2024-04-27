@@ -164,8 +164,10 @@ class CustomSliverDesktopAppBar extends StatelessWidget {
                     padding: MaterialStateProperty.all(
                       const EdgeInsets.symmetric(
                         horizontal: UiConstants.paddingLarge,
-                        vertical: UiConstants.paddingMedium,
                       ),
+                    ),
+                    fixedSize: MaterialStateProperty.all(
+                      const Size(156, 40),
                     ),
                     textStyle: MaterialStateProperty.all(
                       Theme.of(context).textTheme.bodySmall?.copyWith(
