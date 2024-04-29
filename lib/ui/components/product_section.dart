@@ -210,7 +210,7 @@ class _ProductSectionState extends State<ProductSection> {
                     },
                     child: SizedBox(
                       height: cardsCarouselHeightValue,
-                      width: MediaQuery.of(context).size.width,
+                      width: MediaQuery.sizeOf(context).width,
                       child: ListView.builder(
                         controller: scrollController,
                         padding: EdgeInsets.only(

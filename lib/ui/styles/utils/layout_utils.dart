@@ -2,7 +2,7 @@ import '../../../common_libs.dart';
 
 class LayoutUtils {
   static double getDeviceWidth(BuildContext context) {
-    double deviceWidth = MediaQuery.of(context).size.width;
+    double deviceWidth = MediaQuery.sizeOf(context).width;
     return deviceWidth;
   }
 
@@ -99,20 +99,25 @@ class LayoutUtils {
 
   static double getResponsiveHeroCarouselTopSpace(BuildContext context) {
     double deviceWidth = getDeviceWidth(context);
-    return isDesktopSmall(deviceWidth) ? UiConstants.paddingExtraLarge : UiConstants.paddingMedium;
+    return isDesktopSmall(deviceWidth)
+        ? UiConstants.paddingExtraLarge
+        : UiConstants.paddingMedium;
   }
 
-  static double getResponsiveProductSectionBackgroungHeightValue(BuildContext context) {
+  static double getResponsiveProductSectionBackgroungHeightValue(
+      BuildContext context) {
     double deviceWidth = getDeviceWidth(context);
     return isDesktopLarge(deviceWidth) ? 412.0 : 376.0;
   }
 
-  static double getResponsiveProductSectionCardsCarouselPositionLeftValue(BuildContext context) {
+  static double getResponsiveProductSectionCardsCarouselPositionLeftValue(
+      BuildContext context) {
     double deviceWidth = getDeviceWidth(context);
     return isDesktopLarge(deviceWidth) ? 8.0 : 0.0;
   }
 
-  static double getResponsiveProductSectionCardsCarouselPositionTopValue(BuildContext context) {
+  static double getResponsiveProductSectionCardsCarouselPositionTopValue(
+      BuildContext context) {
     double deviceWidth = getDeviceWidth(context);
     return isDesktopLarge(deviceWidth) ? 92.0 : 74.0;
   }
@@ -122,7 +127,8 @@ class LayoutUtils {
     return isDesktopLarge(deviceWidth) ? 500.0 : 480.0;
   }
 
-  static double getResponsiveChildPromotionContainerWidth(BuildContext context) {
+  static double getResponsiveChildPromotionContainerWidth(
+      BuildContext context) {
     double deviceWidth = getDeviceWidth(context);
     return isDesktopLarge(deviceWidth) ? 360.0 : 172.0;
   }
