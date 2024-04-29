@@ -54,7 +54,7 @@ class LayoutUtils {
     double deviceWidth = getDeviceWidth(context);
     return isDesktopLarge(deviceWidth)
         ? UiConstants.paddingMedium
-        : UiConstants.paddingExtraExtraSmall;
+        : UiConstants.paddingNone;
   }
 
   static double getResponsiveLayoutWidthSize(BuildContext context) {
