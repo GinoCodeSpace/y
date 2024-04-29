@@ -42,7 +42,7 @@ class LayoutUtils {
     double deviceWidth = getDeviceWidth(context);
     return isDesktopLarge(deviceWidth)
         ? UiConstants.paddingLarge
-        : UiConstants.paddingMedium;
+        : UiConstants.paddingExtraSmall + 4;
   }
 
   static double getResponsiveHeroCardImageLeftPosition(BuildContext context) {
