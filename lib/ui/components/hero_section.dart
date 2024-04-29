@@ -13,7 +13,7 @@ class HeroSection extends StatelessWidget {
     const double logoImageWidth = 240;
     const double logoImageHeight = 60;
 
-    const String heroGifReference = 'assets/images/hero-gif.dart.gif';
+    const String heroGifReference = 'assets/images/hero-gif.gif';
     const String logoImageReference =
         'assets/images/yandeh-logo-horizontal-with-icon.png';
 
