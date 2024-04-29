@@ -24,10 +24,12 @@ class HeroCarouselCard extends StatelessWidget {
     const double imageContainerWidth = 180.0;
     const double imageContainerHeight = 124.0;
     return Card(
+      borderOnForeground: false,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(
           UiConstants.borderRadiusMedium,
         ),
+      
       ),
       child: Container(
         width: heroCardWidth,
